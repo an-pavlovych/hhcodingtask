@@ -12,7 +12,7 @@ The task
 
 Summary
 -------
-Your task is to create a django model that would store any data (based on a given data configuration) and make this model usable across the project (admin integration + simple form view for adding new instances).
+Your task is to create a django model that would store any data (based on a priori defined data scheme) and make this model usable across the project (admin integration + simple form view for adding new instances).
 
 Requirements
 ------------
