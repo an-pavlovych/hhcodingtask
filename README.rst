@@ -29,3 +29,7 @@ The project has been built using [cookiecutter-django template](https://github.c
 - installing requirements
 - running migrations
 - running django dev server
+
+Collaboration
+=============
+Please create a separate branch where you can commit your work. Follow general guidelines of keeping git history clean and use meaningful messages. Once you're done, please create a pull request where you can describe your solution.
