@@ -7,60 +7,25 @@ This is Hunted Hive coding task.
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
 
+The task
+========
 
-Settings
---------
+Summary
+-------
+Your task is to create a django model that would store any data (based on a given data configuration) and make this model usable across the project (admin integration + simple form view for adding new instances).
 
-Moved to settings_.
+Requirements
+------------
+- django model, say `GenericModel`, that stores any data (proposed aproach is to use JSON field but we're open to better solutions)
+- come up with a scheme describing data that `GenericModel` can store/process, for simplicity let's store it as a project-wide setting. Scheme can support only basic data types, like number, strings etc.
+- view with form for end users for adding new instances of the `GenericModel` (with appropriate validation)
+- django admin integration so admin can view/edit `GenericModel` instances
 
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
+How to set up this project?
+===========================
+The project has been built using [cookiecutter-django template](https://github.com/pydanny/cookiecutter-django). Please refer to it's docs for some more information. Launching the project follows well known guidelines of setting up a standard django project:
 
-Basic Commands
---------------
-
-Setting Up Your Users
-^^^^^^^^^^^^^^^^^^^^^
-
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
-
-* To create an **superuser account**, use this command::
-
-    $ python manage.py createsuperuser
-
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-Test coverage
-^^^^^^^^^^^^^
-
-To run the tests, check your test coverage, and generate an HTML coverage report::
-
-    $ coverage run manage.py test
-    $ coverage html
-    $ open htmlcov/index.html
-
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-  $ py.test
-
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-
-
-Deployment
-----------
-
-The following details how to deploy this application.
-
-
-
-
+- creating virtualenv
+- installing requirements
+- running migrations
+- running django dev server
