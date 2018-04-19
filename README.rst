@@ -18,7 +18,7 @@ Requirements
 ------------
 - django model, say `GenericModel`, that stores any data (proposed aproach is to use JSON field but we're open to better solutions)
 - come up with a scheme describing data that `GenericModel` can store/process, for simplicity let's store it as a project-wide setting. Scheme can support only basic data types, like number, strings etc.
-- view with form for end users for adding new instances of the `GenericModel` (with appropriate validation, for example if scheme declares we have "age" field that is of "integer" type, putting text there will cause validation error with appropriate message)
+- view with form for end users for adding new instances of the `GenericModel` with appropriate validation. Example: if scheme declares we have "age" field that is of "integer" type, putting text in the form field will cause validation error with relevant message for end users
 - django admin integration so admin can view/edit `GenericModel` instances
 
 How to set up this project?
