@@ -17,8 +17,11 @@ ALLOWED_HOSTS = [
 # DATABASES
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'hhcodingtask.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'PORT': 5433,
+        'NAME': 'hhcodingtask',
+        'USER': 'hhcodingtask',
+        'PASSWORD': 'local'
     }
 }
 
