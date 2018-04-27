@@ -16,15 +16,12 @@ class GenericModelForm(ModelForm):
 
     def clean__data(self):
         try:
-            data_dict = json.loads(self.data['_data'])
+            scheme_dict = json.loads(self.data['_data'])
         except JSONDecodeError as e:
-            raise ValidationError('Could not parse json. Reason: {}'.format(e.msg))
-        self.cleaned_data['_data'] = data_dict
-        return self.cleaned_data
+            raise ValidationError('Could not parse json.Reason: {}'.format(e.msg))
 
-    def clean(self):
-        self.clean__data()
-        scheme = settings.SCHEME
+        self.cleaned_data['_data'] = scheme_dict
+        scheme = self.instance.scheme if self.instance is not None else settings.SCHEME
         data = self.cleaned_data['_data']
         errors = validate_data(scheme, data)
         if errors is None:
@@ -32,6 +29,9 @@ class GenericModelForm(ModelForm):
             return self.cleaned_data
         django_error = errors_to_validation_error(errors)
         raise ValidationError(django_error)
+
+    def clean(self):
+        self.clean__data()
 
     class Meta:
         model = GenericModel

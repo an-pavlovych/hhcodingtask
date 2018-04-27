@@ -240,16 +240,16 @@ SOCIALACCOUNT_ADAPTER = 'hhcodingtask.users.adapters.SocialAccountAdapter'
 # Your stuff...
 # ------------------------------------------------------------------------------
 SCHEME = {
-    'age': {
-        'type': 'integer',
-        'nullable': True
+    "age": {
+        "type": "integer",
+        "nullable": True
     },
-    'rank': {
-        'type': 'number',
-        'nullable': True
+    "rank": {
+        "type": "integer",
+        "nullable": True
     },
-    'phone': {
-        'type': 'string',
-        'nullable': True
+    "phone": {
+        "type": "string",
+        "nullable": True
     }
 }
