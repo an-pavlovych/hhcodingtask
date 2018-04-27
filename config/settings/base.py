@@ -245,7 +245,7 @@ SCHEME = {
         'nullable': True
     },
     'rank': {
-        'type': 'numeric',
+        'type': 'number',
         'nullable': True
     },
     'phone': {
